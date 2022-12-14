@@ -80,3 +80,20 @@ for pair in inputs:
     i += 1
 
 print(res_1)
+
+#Partie 2 : Tri du fichier en utilisant la fonction de la partie 1
+inputs_2 = [line for line in open("Advent2022-13.txt","r").read().split('\n') if line != '']
+inputs_2.append('[[2]]')
+inputs_2.append('[[6]]')
+permutation = 999
+#On fait des permutations 2 à 2 tant que la liste change (tri à bulles)
+while permutation > 0:
+    permutation = 0
+    #Boucle de permutation 2 à 2
+    for i in range(len(inputs_2)-1):
+        if not validPair(inputs_2[i],inputs_2[i+1]):
+            inputs_2 = inputs_2[:i]+[inputs_2[i+1]]+[inputs_2[i]]+inputs_2[i+2:]
+            permutation += 1
+
+res_2 = (inputs_2.index('[[2]]')+1)*(inputs_2.index('[[6]]')+1)
+print(res_2)
