@@ -104,5 +104,9 @@ for i in range(len(tower)):
         print(i)
         break
 
-#res = [y_var[i][1] for i in range(len(y_var))]
-#print(res)
+#Print utilisé pour la P2
+#A l'aide de ce print on repère dans notepad++ que passé les 132 premières pièces, il y a un pattern de 1725 pièces qui se répètent
+#En utilisant l'algo existant pour connaître les variations de hauteur, on peut calculer les variation pour 1000000000000, soit
+# 132 + (579710144 * 1725) + 1468
+res = [y_var[i][1] for i in range(len(y_var))]
+print(res)
