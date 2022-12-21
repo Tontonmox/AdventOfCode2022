@@ -32,4 +32,3 @@ for x in newList:
 
 res_1 = newList[(pos0+1000)%len(newList)][1] + newList[(pos0+2000)%len(newList)][1] + newList[(pos0+3000)%len(newList)][1]
 print(res_1)
-
